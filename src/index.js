@@ -11,13 +11,15 @@ const CODE_MAP = {
 }
 
 
-let initChat = (function() {
+let initChat = function() {
     function welcome() {
         const welcomeMsg = '好戏登场喽~';
         const delayTime = 150
         for (let i = 0; i < welcomeMsg.length; i++) {
             (function() {
-                return setTimeout(() => { colorLog('----------', welcomeMsg[i], '----------') }, i * delayTime)
+                return setTimeout(() => {
+                    colorLog('----------', welcomeMsg[i], '----------')
+                }, i * delayTime)
             })()
         }
         return new Promise((resolve, reject) => {
@@ -94,9 +96,6 @@ let initChat = (function() {
         }
         return logData
     }
-    return {
-        init: welcome
-    }
-})()
+}
 
 module.exports = initChat
