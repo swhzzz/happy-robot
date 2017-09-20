@@ -1,6 +1,6 @@
 {
     "name": "happy-robot",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "a npm chat robot",
     "main": "index.js",
     "scripts": {
