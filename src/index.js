@@ -48,7 +48,7 @@ let initChat = function() {
         rl.question('请输入问题(*･x･`*): ', (query) => {
             if (!query) {
                 colorLog("欢迎下次光临(//'ω'//)")
-                return process.exit()
+                process.exit(0)
             }
             let req = http.request({
                 hostname: 'www.tuling123.com',
@@ -89,7 +89,9 @@ let initChat = function() {
                 break;
             case CODE_MAP.NEWS:
                 let list = dataObj.list
-                logData = `${list.article}\n${list.source} ${list.url}`
+                list.forEach((item) => {
+                    logData += `文章标题: ${item.article}\n来源: ${item.source} ${item.detailurl}\n`
+                })
                 break;
             default:
                 logData = dataObj.text
