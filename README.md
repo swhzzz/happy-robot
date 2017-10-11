@@ -2,7 +2,7 @@
 
 # Preview
 
-[Preview](http://wx3.sinaimg.cn/mw690/c037d34dgy1fkes0suhupj20mi0fidjd.jpg)
+![Preview](http://wx3.sinaimg.cn/mw690/c037d34dgy1fkes0suhupj20mi0fidjd.jpg)
 
 # Install
 ```
